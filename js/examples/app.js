@@ -98,7 +98,7 @@
 		stats = new Stats();
 		stats.domElement.style.position = 'absolute';
 		stats.domElement.style.top='0px';
-		var sol = 640+75;
+		var sol = 75;
 		//window.innerWidth/2-125;
 		stats.domElement.style.left=sol+"px";
 		container.appendChild(stats.domElement);
