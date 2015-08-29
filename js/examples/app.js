@@ -98,9 +98,9 @@
 		stats = new Stats();
 		stats.domElement.style.position = 'absolute';
 		stats.domElement.style.top='0px';
-		var sag = 640+75;
+		var sol = 640+75;
 		//window.innerWidth/2-125;
-		stats.domElement.style.right=sag+"px";
+		stats.domElement.style.left=sol+"px";
 		container.appendChild(stats.domElement);
 
 		//for raycast
