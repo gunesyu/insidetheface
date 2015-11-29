@@ -1,0 +1,83 @@
+body {
+	background: black;
+}
+
+#enter {
+	position: absolute;
+	width: 10%;
+	height: 6.6%;
+	background-color: rgb(225,225,225);
+	color: black;
+	text-align: center;
+	left: 45%;
+	top: 70%;
+	font-size: 1.1em;
+	letter-spacing: .1em;
+	border-radius: .25em;
+	cursor: pointer;
+}
+
+#enter:hover {
+	background-color: rgb(150,150,150);
+	color: rgb(25,25,25);
+}
+
+p {
+	display: none;
+}
+
+nav {
+	position: absolute;
+	bottom: 10%;
+	left: 35%;
+	width: 30%;
+	text-align: center;
+	display: block;
+}
+
+/*nav ul {
+	display: inline-block;
+}*/
+
+nav a {
+	color: #fff;
+	font-size: .9em;
+	display: inline-block;
+	padding: 5px 10px;
+	text-decoration: none;
+}
+
+/*nav li:after {
+	content: "|";
+	height: .9em;
+	margin-left: 10px;
+	margin-right: 0px;
+}*/
+
+nav a:hover {
+	color: rgb(150,150,150);
+}
+
+@media screen and (max-width: 680px) {
+
+	#enter {
+		width: 68px;
+		font-size: .8em;
+	}
+
+	nav {
+		left: 0px;
+		width: 100%;
+	}
+
+}
+
+@media screen and (max-width: 400px) {
+
+	#enter {
+		left: 0px;
+		width: 100%;
+		font-size: 1em;
+	}
+
+}

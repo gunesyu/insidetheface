@@ -1,0 +1,65 @@
+body {
+	position: absolute;
+    margin: 0;
+    padding: 0;
+	background: black;
+}
+#stage {
+	position: absolute;
+}
+
+#webgl-container {
+	position: absolute;
+	left: 640px;
+	top: 0px;
+}
+
+#webgl-container canvas {
+	width: 20px;
+	height: 20px;
+}
+
+#btPlay {
+	 display:none;
+	 position:absolute;
+	 top:165px;
+	 left:221px;
+}
+
+#move {
+	position: absolute;
+	top: 440px;
+	width: 80px;
+	left: 560px;
+	height: 40px;
+	z-index: 1000;
+	/*background-color: #000;
+	color: #fff;*/
+	background-color: rgba(0,0,34,.9);
+	color: rgb(0,255,255);
+	cursor: pointer;
+	border-width: .5px;
+	border-color: rgb(100,100,100);
+}
+ #move:hover {
+ 	background-color: rgba(0,255,255,.9);
+ 	color: rgb(0,0,34);
+ }
+#brfLogo {
+	position: absolute;
+
+}
+
+#brfLogo #blackLogo {
+ 	opacity:.1;
+ 	position:absolute;
+ 	top:5px;
+ 	left:5px;
+ }
+
+#brfLogo #whiteLogo {
+ 	opacity:.2;
+ 	position:absolute;
+ 	top:4px;
+ 	left:4px;
+ }

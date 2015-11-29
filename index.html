@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="author" content="Yunus Emre Gunes, Istanbul Technical University">
-	<meta name="description" content="Inside the Face Project : A 3D Reconstruciton Project for Human Faces Obtained from Webcam">
+	<meta name="author" content="Yunus Emre Gunes &amp; Ezgi Yurdakul">
+	<meta name="description" content="Inside the Face Project : A 3D Reconstruciton Project for Human Faces">
 
-	<title>Inside the Face Project / Beyond Reality Face & Three.js</title>
+	<title>Inside the Face Project / Beyond Reality Face &amp; Three.js</title>
 
-	<link rel="stylesheet" href="css/brf_examples.css">
+	<link rel="stylesheet" href="css/appStyle.css">
 
 	<script src="js/lib/stats/stats.min.js"></script>
 
@@ -26,30 +26,27 @@
 	<script src="js/lib/brf/BRF_NXT_public_API.js"></script>
 	<script src="js/lib/brf/BRF_NXT_JS_TK200215_v3.0.16_trial.js"></script>
 
-	<script src="js/examples/three.js"></script>
-	<script src="js/examples/OrbitControls.js"></script>
+	<script src="js/lib/threejs/three.js"></script>
+	<script src="js/lib/threejs/OrbitControls.js"></script>
 
-	<script src="js/examples/ExampleBase.js"></script>
+	<script src="js/ExampleBase.js"></script>
 	
-	<script src="js/examples/ExampleCandideTracking.js"></script>
+	<script src="js/ExampleCandideTracking.js"></script>
 
-	<script src="js/examples/dat.gui.min.js"></script>
-	<script src="js/examples/app.js"></script>
+	<script src="js/lib/dat.gui.min.js"></script>
+	<script src="js/app.js"></script>
 
 </head>
 
 <body onload="initExample();">
-
-	<div id="webgl-container" width="640" height="480" style="position:absolute;left:640px;top:0px;"></div>
-
-	<canvas id="_stage" width="640" height="720" style="position:absolute;left:0px;top:0px;">Your browser does not seem to support canvas elements.</canvas>
-
-	<img src="media/assets/play.png" id="btPlay" style="display:none;position:absolute;top:165px;left:221px;"/>
-
+	<div id="webgl-container"></div>
+	<canvas id="stage" width="640" height="480">Your browser does not seem to support canvas elements.</canvas>
+	<img src="media/assets/play.png" id="btPlay"/>
+	<button id="move">MOVE</button>
 	<div id="brfLogo">
 		<a href="https://www.beyond-reality-face.com" target="_blank">
-			<img src="media/assets/brf_nxt_logo_black.png" style="opacity:0.35;position:absolute;top:5px;left:5px;"/>
-			<img src="media/assets/brf_nxt_logo_white.png" style="opacity:0.75;position:absolute;top:4px;left:4px;"/>
+			<img id="blackLogo" src="media/assets/brf_nxt_logo_black.png" />
+			<img id="whiteLogo" src="media/assets/brf_nxt_logo_white.png" />
 		</a>
 	</div>
 </body>

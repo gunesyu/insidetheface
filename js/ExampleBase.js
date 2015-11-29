@@ -19,7 +19,7 @@ function initExample() {
 	 * It's always the same, so make it a function.
 	 */
 	lib.initCreateJS = function() {
-		var _stage = new createjs.Stage("_stage");
+		var _stage = new createjs.Stage("stage");
 		_stage.enableMouseOver(10);
 		
 		createjs.Ticker.setFPS(30);
