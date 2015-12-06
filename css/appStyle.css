@@ -28,6 +28,7 @@ body {
 
 #move {
 	position: absolute;
+	font-family: Consolas, monaco, monospace;
 	top: 440px;
 	width: 80px;
 	left: 560px;

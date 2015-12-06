@@ -2,6 +2,13 @@ body {
 	background: black;
 }
 
+#face {
+	position: absolute;
+	bottom: 36%;
+	height: 64%;
+	left: 30%;
+}
+
 #enter {
 	position: absolute;
 	width: 10%;
@@ -9,6 +16,7 @@ body {
 	background-color: rgb(225,225,225);
 	color: black;
 	text-align: center;
+	font-family: Consolas, monaco, monospace;
 	left: 45%;
 	top: 70%;
 	font-size: 1.1em;
@@ -22,43 +30,52 @@ body {
 	color: rgb(25,25,25);
 }
 
-p {
-	display: none;
-}
-
 nav {
 	position: absolute;
 	bottom: 10%;
-	left: 35%;
-	width: 30%;
 	text-align: center;
-	display: block;
+	width: 50%;
+	left: 25%;
 }
 
-/*nav ul {
-	display: inline-block;
-}*/
+nav ul {
+	padding: 0;
+	margin: 0 auto;
+}
 
-nav a {
-	color: #fff;
-	font-size: .9em;
+nav li {
 	display: inline-block;
+}
+
+nav li a {
+	color: #fff;
+	font-family: Consolas, monaco, monospace;
+	font-size: .9em;
 	padding: 5px 10px;
 	text-decoration: none;
 }
 
-/*nav li:after {
+nav li:after {
+	color: #fff;
+	font-family: Consolas, monaco, monospace;
 	content: "|";
 	height: .9em;
-	margin-left: 10px;
-	margin-right: 0px;
-}*/
+}
+
+nav li:last-child:after {
+	content: "";
+}
 
 nav a:hover {
 	color: rgb(150,150,150);
 }
 
-@media screen and (max-width: 680px) {
+p#narrowWindowNoticer {
+	font-family: Consolas, monaco, monospace;
+	display: none;
+}
+
+@media screen and (max-width: 800px) {
 
 	#enter {
 		width: 68px;
@@ -74,10 +91,12 @@ nav a:hover {
 
 @media screen and (max-width: 400px) {
 
+	p#narrowWindowNoticer {
+		display: inline;
+	}
+
 	#enter {
-		left: 0px;
-		width: 100%;
-		font-size: 1em;
+		display: none;
 	}
 
 }
