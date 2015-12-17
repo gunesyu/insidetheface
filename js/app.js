@@ -184,80 +184,6 @@ function guiController(bool){
 				obj.material.wireframe = objConfig.wireframe;
 			} 
 		);
-		
-
-		/* ---------------------------  BU BÖLÜMDE UPDATE SIKINTISI VAR  --------------------------- */
-
-		/*matGui = faceGui.addFolder('Material');
-		
-		matGui.add( objConfig, 'lambert', true ).onChange( 
-			function() {
-				if (objConfig.lambert == false) {
-					if (!objConfig.normal && !objConfig.basic && !objConfig.phong){
-						objConfig.lambert=true;
-						obj.material = matLambert;
-					};
-				}
-				else {
-				   obj.material = matLambert;
-				   objConfig.basic = false;
-				   objConfig.normal = false;
-				   objConfig.phong = false;
-				};
-			} 
-		).listen();
-
-		matGui.add( objConfig, 'basic', false ).onChange(
-			function() {
-			    if (objConfig.basic == false) {
-			    	if (!objConfig.normal && !objConfig.lambert && !objConfig.phong){
-						objConfig.lambert=true;
-						obj.material = matLambert;
-					};
-				}
-				else {
-				   obj.material = matBasic;
-				   objConfig.lambert = false;
-				   objConfig.normal = false;
-				   objConfig.phong = false;
-				};
-			}
-		).listen();
-
-		matGui.add( objConfig, 'normal', false ).onChange(
-			function() {
-			    if (objConfig.normal == false) {
-			    	if (!objConfig.lambert && !objConfig.basic && !objConfig.phong){
-						objConfig.lambert=true;
-						obj.material = matLambert;
-					};
-				}
-				else {
-				   obj.material = matNormal;
-				   objConfig.basic = false;
-				   objConfig.lambert = false;
-				   objConfig.phong = false;
-				};
-			}
-		).listen();
-
-		matGui.add( objConfig, 'phong', false ).onChange(
-			function() {
-			    if (objConfig.phong == false) {
-			    	if (!objConfig.normal && !objConfig.basic && !objConfig.lambert){
-						objConfig.lambert=true;
-						obj.material = matLambert;
-					};
-				}
-				else {
-				   obj.phong = matPhong;
-				   objConfig.basic = false;
-				   objConfig.normal = false;
-				   objConfig.lambert = false;
-				};
-			}
-		).listen();*/
-		/* ---------------------------------------------------------------------------------  */
 
 		//scene grid and axis options
 		sceneGui = gui.addFolder('Sahne Modu');
@@ -284,11 +210,6 @@ function guiController(bool){
 			};
 		}).listen();
 	}
-	/*
-	else if (bool == false) {
-		console.log("kaldir");
-	}
-	*/
 }
 
 function onMouseMove( event ) {
@@ -308,7 +229,7 @@ function moveStage(){
 		newLeft = window.innerWidth - 256;
 		newTop = window.innerHeight - 192;
 		this.style.height = "16px";
-		this.innerHTML = "RELOCATE";
+		this.innerHTML = "PUT BACK";
 		ratio = window.innerWidth/window.innerHeight;
 
 		container.style.left = "0px";
@@ -351,7 +272,6 @@ function moveStage(){
 	stage.style.top = newTop+"px";
 
 	camera.aspect = ratio;
-	
 }
 
 function animate(){
@@ -369,15 +289,6 @@ function render(){
 	raycaster.setFromCamera( mouse, camera );	
 	// calculate objects intersecting the picking ray
 	var intersects = raycaster.intersectObjects( scene.children );
-
-
-	/* -----------------   KESİŞİMİ KONTROL ET   ----------------- */
-	//for ( var i = 0; i < intersects.length; i++ ) {
-		//if (intersects[i].object.name == "kafa") {
-			//console.log("kafayla kesisti");
-		//};
-	//}
-	/* ----------------------------------------------------------- */
 
 	renderer.render(scene, camera);
 
@@ -404,18 +315,7 @@ function updateFace(faceShape){
 	obj.geometry.tangentsNeedUpdate=true;
 	obj.geometry.computeFaceNormals();
 
-
-
-	/* 
-	DÖNÜŞLERİ VE YAKLAŞIP UZAKLAŞMAYI ROTATION VE TRANSFORM İLE KONTROL ET
-	BOUNDING SPHERE'İN' YARIÇAPININ ZAMANA GÖRE DEĞİŞİMİNİ KULLAN
-	*/
-	/* ---------------------------------------------------------------------- */
-	//obj.rotation.y += 0.01;
 	obj.geometry.computeBoundingSphere();
-	//console.log(obj.geometry.boundingSphere);
-	//console.log(clock.getDelta());
-	/* ---------------------------------------------------------------------- */
 
 }
 

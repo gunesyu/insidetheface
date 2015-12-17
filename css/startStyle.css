@@ -1,13 +1,12 @@
 body {
 	background: black;
+	font-family: Consolas, monaco, monospace;
 }
 
-#face {
+/* #face {
 	position: absolute;
-	bottom: 36%;
-	height: 64%;
-	left: 30%;
-}
+	width: 100%;
+} */
 
 #enter {
 	position: absolute;
@@ -16,7 +15,6 @@ body {
 	background-color: rgb(225,225,225);
 	color: black;
 	text-align: center;
-	font-family: Consolas, monaco, monospace;
 	left: 45%;
 	top: 70%;
 	font-size: 1.1em;
@@ -49,7 +47,6 @@ nav li {
 
 nav li a {
 	color: #fff;
-	font-family: Consolas, monaco, monospace;
 	font-size: .9em;
 	padding: 5px 10px;
 	text-decoration: none;
@@ -57,7 +54,6 @@ nav li a {
 
 nav li:after {
 	color: #fff;
-	font-family: Consolas, monaco, monospace;
 	content: "|";
 	height: .9em;
 }
@@ -71,32 +67,30 @@ nav a:hover {
 }
 
 p#narrowWindowNoticer {
-	font-family: Consolas, monaco, monospace;
+	color: #fff;
+	position: absolute;
+	width: 70%;
+	left: 15%;
+	top: 35%;
+	text-align: center;
+	background-color: #000;
+	font-size: 1.2em;
 	display: none;
 }
 
 @media screen and (max-width: 800px) {
 
 	#enter {
-		width: 68px;
-		font-size: .8em;
+		display: none;
+	}
+
+	p#narrowWindowNoticer {
+		display: inline-block;
 	}
 
 	nav {
 		left: 0px;
 		width: 100%;
-	}
-
-}
-
-@media screen and (max-width: 400px) {
-
-	p#narrowWindowNoticer {
-		display: inline;
-	}
-
-	#enter {
-		display: none;
 	}
 
 }
