@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
 	$("#enter").click(function(){
-		window.location.replace("app.html");
+		window.location.assign("app.html");
 	});
 
 
