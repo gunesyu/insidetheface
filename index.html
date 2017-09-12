@@ -2,16 +2,111 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-capable" content="yes">
+	<meta name="mobile-web-app-capable" content="yes">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="author" content="Yunus Emre Gunes &amp; Ezgi Yurdakul">
+	<meta name="author" content="Yunus Emre Gunes">
 	<meta name="description" content="Inside the Face Project Home Page">
 	
 	<title>Inside the Face Project / Beyond Reality Face &amp; Three.js</title>
 	
 	<link rel="shortcut icon" href="media/assets/face_favicon.ico">
-	<link rel="stylesheet" href="css/startStyle.css">
-	<script type="text/javascript" src="js/lib/jquery-2.1.4.min.js"></script>
-	<script type="text/javascript" src="js/startApp.js"></script>
+
+	<style>
+		body {
+			background: black;
+			font-family: Consolas, monaco, monospace;
+		}
+		/* #face {
+			position: absolute;
+			width: 100%;
+		} */
+		#enter {
+			position: absolute;
+			width: 10%;
+			height: 6.6%;
+			background-color: rgb(225,225,225);
+			color: black;
+			text-align: center;
+			left: 45%;
+			top: 70%;
+			font-size: 1.1em;
+			letter-spacing: .1em;
+			border-radius: .25em;
+			cursor: pointer;
+		}
+		#enter:hover {
+			background-color: rgb(150,150,150);
+			color: rgb(25,25,25);
+		}
+		nav {
+			position: absolute;
+			bottom: 10%;
+			text-align: center;
+			width: 50%;
+			left: 25%;
+		}
+		nav ul {
+			padding: 0;
+			margin: 0 auto;
+		}
+		nav li {
+			display: inline-block;
+		}
+		nav li a {
+			color: #fff;
+			font-size: .9em;
+			padding: 5px 10px;
+			text-decoration: none;
+		}
+		nav li:after {
+			color: #fff;
+			content: "|";
+			height: .9em;
+		}
+		nav li:last-child:after {
+			content: "";
+		}
+		nav a:hover {
+			color: rgb(150,150,150);
+		}
+		p#narrowWindowNoticer {
+			color: #fff;
+			position: absolute;
+			width: 70%;
+			left: 15%;
+			top: 35%;
+			text-align: center;
+			background-color: #000;
+			font-size: 1.2em;
+			display: none;
+		}
+		@media screen and (max-width: 800px) {
+			#enter {
+				display: none;
+			}
+			p#narrowWindowNoticer {
+				display: inline-block;
+			}
+			nav {
+				left: 0px;
+				width: 100%;
+			}
+		}
+	</style>
+
+	<!--[if lte IE 8]><script>(function(){var e="abbr,article,aside,audio,canvas,datalist,details,figure,footer,header,hgroup,mark,menu,meter,nav,output,progress,section,time,video".split(','),i=e.length;while(i--){document.createElement(e[i]);}}());</script><![endif]-->
+
+	<script type="text/javascript">
+		window.onload = function(){
+			var but = document.getElementById("enter");
+
+			but.addEventListener("click", function(){
+				window.location.assign("https://gunesyu.github.io/insidetheface/app.html");
+			}, false);
+		}
+	</script>
 
 </head>
 <body>
