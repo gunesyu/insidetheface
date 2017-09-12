@@ -228,7 +228,7 @@ function moveStage(){
 		newHeight = 192;
 		newLeft = window.innerWidth - 256;
 		newTop = window.innerHeight - 192;
-		this.style.height = "16px";
+		this.style.height = "25px";
 		this.innerHTML = "PUT BACK";
 		ratio = window.innerWidth/window.innerHeight;
 
