@@ -284,7 +284,7 @@ function initExample() {
 						}
 				};
 				
-				/*var getUserMedia =
+				var getUserMedia =
 					window.navigator.getUserMedia ||
 					window.navigator.mozGetUserMedia ||
 					window.navigator.webkitGetUserMedia ||
@@ -292,12 +292,8 @@ function initExample() {
 					function(options, success, error) {
 						error();
 					};
-				getUserMedia.call(window.navigator, constraints, _this.onCameraAvailable, _this.onCameraUnavailable);*/
-				navigator.getMedia = ( navigator.getUserMedia ||
-            	          navigator.webkitGetUserMedia ||
-            	          navigator.mozGetUserMedia ||
-            	          navigator.msGetUserMedia);
-				navigator.getMedia(constraints, _this.onCameraAvailable, _this.onCameraUnavailable);
+
+				getUserMedia.call(window.navigator, constraints, _this.onCameraAvailable, _this.onCameraUnavailable);
 			}
 
 			return _this._camera != null;
